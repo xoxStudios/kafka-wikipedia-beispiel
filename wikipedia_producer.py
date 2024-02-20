@@ -4,7 +4,7 @@ import random #only for sample data
 
 from kafka import KafkaProducer #refers to kafka-python
 
-ORDER_KAFKA_TOPIC = "wikipedia_events"
+EVENT_KAFKA_TOPIC = "wikipedia_events"
 EVENT_LIMIT = 500
 
 # create a dictionary for known namespaces https://en.wikipedia.org/wiki/Wikipedia:Namespace#Programming
@@ -50,6 +50,6 @@ for i in range(1, EVENT_LIMIT):
         "new_length": i+1,
     }
 
-    producer.send(ORDER_KAFKA_TOPIC, json.dumps(data).encode("utf-8"))
+    producer.send(EVENT_KAFKA_TOPIC, json.dumps(data).encode("utf-8"))
     print(f"Done Sending..{i}")
     time.sleep(random.random())  # random sleep time between 0 and 1 in float
