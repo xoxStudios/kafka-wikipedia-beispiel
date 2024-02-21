@@ -28,7 +28,7 @@ Consumes the edited wikipedia_events_agg stream and calculates the avg changes i
 
 ## Notes ##
 
-The project ist to demonstrate a simple kafka pipeline with microservices for later extension with mature services and scalability.
+The project is to demonstrate a simple kafka pipeline with microservices for later extension with mature services and scalability.
 The Wikipedia_Producer can hook up the WikipediaRecentchange SSE stream for real data; the Wikipedia_Consumer can perform heavier cleanup and transformation with ie. K-SQL
 and the Wikipedia_Analytics can write the output to databases like mongoDB, or elasticsearch for data analysis.
 
